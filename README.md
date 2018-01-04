@@ -29,3 +29,26 @@ while( $reader->read() ) {
 $reader->close();
      
 ```
+
+## 2. CSV file
+
+```php
+
+$filename = plugin_dir_url( __FILE__ ).'data.csv';
+$data = explode("\n", file_get_contents($filename));
+foreach ($data as $entry) {
+    $item = str_getcsv($entry, ";", "\""); 
+    $some_data_0 = $item[0];
+    $some_data_1 = $item[1];
+    //...		
+}
+```		
+
+## 3. Website
+
+Simple HTML DOM
+http://simplehtmldom.sourceforge.net/manual.htm
+
+```php	
+}
+```	
